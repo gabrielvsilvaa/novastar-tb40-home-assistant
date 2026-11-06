@@ -40,6 +40,17 @@ O relé é opcional. Com o painel energizado, você pode ajustar o brilho pela i
 
 Selecione o relé do painel nas opções para reaplicar o brilho após 5, 10, 20 e 30 segundos da partida. Ative a curva solar para usar a elevação do Sol como referência, com alvo de 100% a +5,5° e 8% a −3,5°. A integração cria uma entidade numérica de brilho. É possível vinculá-la a um helper de uma luz já existente.
 
+### Controle de brilho no HomeKit
+
+Para ter um controle de brilho no app Casa, crie uma **luz de modelo (Template Light)** no Home Assistant ou reaproveite uma luz de modelo que já tenha suporte a brilho:
+
+1. Configure as ações de ligar e desligar da luz para acionar o relé do painel. Use o estado desse relé como estado da luz.
+2. Na ação de ajuste de brilho da luz, converta o nível de 0–255 para porcentagem e envie o valor à entidade **Brilho desejado** da NovaStar TB40 com a ação `number.set_value`. Use uma faixa de 1–100% enquanto a luz estiver ligada.
+3. Use o brilho desejado da integração como fonte do nível da luz, convertendo a porcentagem de volta para 0–255. Se já usa um helper numérico para essa leitura, selecione-o em **Controle de brilho existente (opcional)** nas opções da TB40.
+4. Exponha a **entidade de luz** pelo **HomeKit Bridge** e use o controle de brilho no app Casa.
+
+O relé fornece o controle de energia. A luz de modelo combina esse controle com o ajuste de brilho da TB40.
+
 ## Compatibilidade e feedback
 
 A versão 0.2.1 foi testada com uma TB40 e Home Assistant 2026.8. Outros firmwares ainda precisam de validação. Em um relato de problema, informe as versões e o comportamento observado. Omita IPs, números de série e credenciais.
