@@ -1,3 +1,5 @@
+![Logotipo oficial da NovaStar](https://raw.githubusercontent.com/gabrielvsilvaa/novastar-tb40-home-assistant/main/custom_components/novastar_tb40/brand/logo.png)
+
 # NovaStar TB40 para Home Assistant
 
 Integração comunitária em beta para controle local de brilho da NovaStar TB40. Ajusta de 1% a 100% em passos de 0,1 ponto percentual. Oferece curva solar e reenvio de brilho na partida com um relé configurado.
