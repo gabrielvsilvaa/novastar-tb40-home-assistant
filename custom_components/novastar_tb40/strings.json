@@ -1,0 +1,64 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "NovaStar TB40",
+        "data": {
+          "host": "Local IPv4 address",
+          "serial": "Serial number",
+          "username": "Username",
+          "password": "Password sent to controller (AVON)",
+          "check_connection": "Check network connection"
+        },
+        "description": "Use the local IPv4 address and the serial number on the controller label. The network check tests the TCP port only and does not verify the password."
+      },
+      "reconfigure": {
+        "title": "Update TB40 connection",
+        "description": "Leave the password blank to keep the current one. The check only tests the TCP port.",
+        "data": {
+          "host": "Local IPv4 address",
+          "username": "Username",
+          "password": "Password sent to controller (AVON)",
+          "check_connection": "Check network connection"
+        }
+      }
+    },
+    "error": {
+      "required": "Enter a value.",
+      "invalid_ip": "Enter a valid IPv4 address.",
+      "cannot_connect": "Could not reach TCP port 16603. Check the address, network, and controller power."
+    },
+    "abort": {
+      "already_configured": "This controller is already configured.",
+      "reconfigure_successful": "Connection settings updated."
+    }
+  },
+  "entity": {
+    "number": {
+      "brightness": {
+        "name": "Brightness target"
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "TB40 automation",
+        "data": {
+          "relay": "Panel relay",
+          "solar": "Automatic solar brightness",
+          "night_limit": "Limit nighttime startup with the solar curve disabled",
+          "legacy_brightness": "Existing brightness helper (optional)"
+        }
+      }
+    },
+    "error": {
+      "relay_required": "Select the panel relay."
+    }
+  },
+  "exceptions": {
+    "send_failed": {
+      "message": "Could not send brightness to the TB40. Check that the controller is on and reachable."
+    }
+  }
+}
