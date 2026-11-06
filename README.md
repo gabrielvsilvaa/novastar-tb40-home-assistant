@@ -49,7 +49,7 @@ Para ter um controle de brilho no app Casa, crie uma **luz de modelo (Template L
 3. Use o brilho desejado da integração como fonte do nível da luz, convertendo a porcentagem de volta para 0–255. Se já usa um helper numérico para essa leitura, selecione-o em **Controle de brilho existente (opcional)** nas opções da TB40.
 4. Exponha a **entidade de luz** pelo **HomeKit Bridge** e use o controle de brilho no app Casa.
 
-O relé fornece o controle de energia. A luz de modelo combina esse controle com o ajuste de brilho da TB40.
+No app Casa, essa entidade aparece como uma única luz com controle de brilho. Ao ligar ou desligar a luz, o Home Assistant aciona o relé. Ao mover o controle de brilho, o Home Assistant envia o novo nível à TB40 pela rede.
 
 ## Compatibilidade e feedback
 
