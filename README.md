@@ -36,7 +36,7 @@ O teste de rede verifica somente a porta TCP 16603. Ajuste **Brilho desejado** e
 
 O relé é opcional. Com o painel energizado, você pode ajustar o brilho pela integração sem configurar um relé. Para usar a curva solar e reaplicar o brilho na partida, selecione a entidade de interruptor que representa o comando de alimentação do painel.
 
-**Exemplo com Apple TV.** Neste exemplo, uma automação do Home Assistant aciona o relé quando a Apple TV sai do modo de espera. O relé comanda uma contatora, que liga ou desliga a alimentação do painel. A NovaStar TB40 acompanha o estado do relé no Home Assistant e reaplica o brilho na partida. A automação da Apple TV é configurada separadamente. A contatora faz parte deste exemplo de instalação e é opcional para a integração.
+**Exemplo com Apple TV.** Neste exemplo, uma automação do Home Assistant aciona o relé quando a Apple TV sai do modo de espera. O relé aciona o comando de alimentação do painel. A NovaStar TB40 acompanha o estado do relé no Home Assistant e reaplica o brilho na partida. A automação da Apple TV é configurada separadamente.
 
 Selecione o relé do painel nas opções para reaplicar o brilho após 5, 10, 20 e 30 segundos da partida. Ative a curva solar para usar a elevação do Sol como referência, com alvo de 100% a +5,5° e 8% a −3,5°. A integração cria uma entidade numérica de brilho. É possível vinculá-la a um helper de uma luz já existente.
 
