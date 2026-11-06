@@ -1,0 +1,64 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "NovaStar TB40",
+        "data": {
+          "host": "IPv4 local",
+          "serial": "Número de série",
+          "username": "Usuário",
+          "password": "Senha enviada à controladora (AVON)",
+          "check_connection": "Verificar conexão de rede"
+        },
+        "description": "Use o IPv4 local e o número de série da etiqueta da controladora. A verificação de rede testa apenas a porta TCP e não confirma a senha."
+      },
+      "reconfigure": {
+        "title": "Atualizar conexão da TB40",
+        "description": "Deixe a senha em branco para manter a atual. A verificação testa somente a porta TCP.",
+        "data": {
+          "host": "IPv4 local",
+          "username": "Usuário",
+          "password": "Senha enviada à controladora (AVON)",
+          "check_connection": "Verificar conexão de rede"
+        }
+      }
+    },
+    "error": {
+      "required": "Informe um valor.",
+      "invalid_ip": "Informe um endereço IPv4 válido.",
+      "cannot_connect": "Não foi possível conectar à porta TCP 16603. Verifique o IP, a rede e se a controladora está ligada."
+    },
+    "abort": {
+      "already_configured": "Esta controladora já foi configurada.",
+      "reconfigure_successful": "Conexão atualizada."
+    }
+  },
+  "entity": {
+    "number": {
+      "brightness": {
+        "name": "Brilho desejado"
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Automação da TB40",
+        "data": {
+          "relay": "Relé do painel",
+          "solar": "Brilho automático pelo Sol",
+          "night_limit": "Limitar a partida noturna com a curva solar desativada",
+          "legacy_brightness": "Controle de brilho existente (opcional)"
+        }
+      }
+    },
+    "error": {
+      "relay_required": "Selecione o relé do painel."
+    }
+  },
+  "exceptions": {
+    "send_failed": {
+      "message": "Não foi possível enviar o brilho à TB40. Verifique se a controladora está ligada e acessível na rede."
+    }
+  }
+}
