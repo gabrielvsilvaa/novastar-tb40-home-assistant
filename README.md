@@ -55,4 +55,4 @@ No app Casa, essa entidade aparece como uma única luz com controle de brilho. A
 
 A versão 0.2.1 foi testada com uma TB40 e Home Assistant 2026.8. Outros firmwares ainda precisam de validação. Em um relato de problema, informe as versões e o comportamento observado. Omita IPs, números de série e credenciais.
 
-Projeto comunitário. O logotipo identifica o equipamento e pertence à [NovaStar](https://www.novastar.tech/).
+Projeto comunitário independente, sem vínculo com a NovaStar ou com o Home Assistant. O logotipo identifica o equipamento e pertence à [NovaStar](https://www.novastar.tech/).
